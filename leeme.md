@@ -7,6 +7,6 @@ git clone https://github.com/dark186/p4yl0ad.git
 
 cd p4yl0ad
 
-chmod +x p4yl0ad.py
+chmod +x metasploit.py
 
-./p4yl0ad.py
+./metasploit.py
