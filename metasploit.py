@@ -37,8 +37,6 @@ def direccion():
 	s.connect(("8.8.8.8", 80))
 	print(cyan+s.getsockname()[0])
 
-
-
 def entrada2():
 	os.system("clear")
 	print (verde+"Tu direccion ip es: ")
@@ -79,7 +77,7 @@ _________________________”$b.______”$$$$b._”$$$$$
 ________________________._”$$_______”$$$$b__”$$$$
 _________________________L.”$.______.$$$$$.__
 	""")
-	print (amarillo+"(solo para Android 7 o superior, teniendo en cuenta un espacion de 500mb minimo):")
+	print (amarillo+"solo para Android 7 o superior, teniendo en cuenta un espacion de 500mb minimo")
 
 	ing = str(input(verde+"Empezar: y/n "+blanco))
 
@@ -99,68 +97,100 @@ _________________________L.”$.______.$$$$$.__
 		time.sleep(0.6)
 		exit()
 
+	elif ing == "n" or ing == "N":
+		os.system("clear")
+		print (verde+"[!]Regresando..")
+		time.sleep(0.2)
+		os.system("clear")
+		print (rojo+"[!]Regresando..")
+		time.sleep(0.2)
+		os.system("clear")
+		print (amarillo+"[!]Regresando..")
+		time.sleep(0.2)
+		os.system("clear")
+		print (rojo+"[!]Regresando..")
+		menu()
 
-	
+	else:
+		os.system("clear")
+		print("Entrada Incorrecta")
+		time.sleep(0.3)
+		entrada3()
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-time.sleep(1.2)
-os.system("clear")
-print(rojo+str("                _                  _       _ _   "))
-print(str(rojo+"               | |                | |     (_) |  "))
-print(str(verde+" _ __ ___   ___| |_ __ _ ___ _ __ | | ___  _| |_ "))
-print(str(amarillo+"| '_ ` _ \ / _ \ __/ _` / __| '_ \| |/ _ \| | __|"))
-print(str(azul+"| | | | | |  __/ || (_| \__ \ |_) | | (_) | | |_ "))
-print(str(cyan+"|_| |_| |_|\___|\__\__,_|___/ .__/|_|\___/|_|\__|"))
-print(str(magenta+"                            | |                  "))
-print(str(blanco+"                            |_|                  "+blanco))
-time.sleep(0.2)
-
-print ("[1]- Android")
-print ("[2]- Pc ")
-print ("[3]- Instalar en termux")
-print ("[4]- Actualizar Metasploit (Solo Debian)")
-print ("[5]- Salir"+verde)
-
-
-inp = input("DarkGhost-$ "+blanco)
-
-if inp == "1":
-	entrada1()
-
-elif inp == "2":
-	
-	entrada2()
-
-elif inp == "3":
-	entrada3()
-
-
-
-elif inp == "5":
-	print ("[!]Saliendo")
+def entrada4():
+	print(rojo+"Actualizando metasploit")
+	os.system("sudo apt install metasploit-framework")
+	print(verde+"Sucefull update!")
 	time.sleep(0.5)
-	exit()
+	menu()
 
-else:
+def entrada5():
+	os.system("google-chrome https://facebook.com/d4rksit3")
+	#os.system("google-chrome https://facebook.com/d4rksit3")
+
+
+
+
+
+
+
+
+
+
+def menu():
+	time.sleep(1.2)
 	os.system("clear")
+	print(rojo+str("                _                  _       _ _   "))
+	print(str(rojo+"               | |                | |     (_) |  "))
+	print(str(verde+" _ __ ___   ___| |_ __ _ ___ _ __ | | ___  _| |_ "))
+	print(str(amarillo+"| '_ ` _ \ / _ \ __/ _` / __| '_ \| |/ _ \| | __|"))
+	print(str(rojo+"| | | | | |  __/ || (_| \__ \ |_) | | (_) | | |_ "))
+	print(str(verde+"|_| |_| |_|\___|\__\__,_|___/ .__/|_|\___/|_|\__|"))
+	print(str(verde+"                            | |      D4rksit3            "))
+	print(str(blanco+"                            |_|                  "+blanco))
 	time.sleep(0.2)
-	print (rojo+"[!] Ingresaste un dato incorrecto")
-	time.sleep(2)
-	os.system("clear")
-	print ("[!]Saliendo")
-	time.sleep(2)
-	exit()
-		
+
+	print ("[1]- Payload Android")
+	print ("[2]- Payload Pc (Windows) ")
+	print ("[3]- Instalar en termux")
+	print ("[4]- Actualizar Metasploit (Solo Debian)")
+	print ("[5]- Autor")
+	print ("[6]- Salir"+verde)
+
+
+	inp = input("DarkGhost-$ "+blanco)
+
+	if inp == "1":
+		entrada1()
+
+	elif inp == "2":
+	
+		entrada2()
+
+	elif inp == "3":
+		entrada3()
+
+	elif inp == "4":
+		entrada4()
+
+	elif inp == "5":
+		entrada5()
+
+
+	elif inp == "6":
+		print ("[!]Saliendo")
+		time.sleep(0.5)
+		exit()
+
+	else:
+		os.system("clear")
+		time.sleep(0.2)
+		print (rojo+"[!] Ingresaste un dato incorrecto")
+		time.sleep(2)
+		os.system("clear")
+		print ("[!]Restaurando")
+		time.sleep(2)
+		menu()
+
+
+menu()
