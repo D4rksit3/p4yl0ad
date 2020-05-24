@@ -14,6 +14,8 @@ git clone https://github.com/dark186/p4yl0ad.git
 
 cd p4yl0ad
 
+sudo python3 -m pip install -r requirements.txt
+
 chmod +x metasploit.py
 
 ./metasploit.py
