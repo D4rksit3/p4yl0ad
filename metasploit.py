@@ -178,8 +178,10 @@ def menu():
 
 
 	elif inp == "6":
+		os.system("clear")
 		print ("[!]Saliendo")
 		time.sleep(0.5)
+		os.system("clear")
 		exit()
 
 	else:
