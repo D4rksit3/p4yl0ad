@@ -52,6 +52,68 @@ def entrada2():
 
 	os.system("msfconsole")	
 
+def entrada3():
+	os.system("clear")
+	print (rojo+"""
+___________$b__Vb.
+___________’$b__V$b.
+____________$$b__V$$b.
+____________’$$b._V$$$$oooooooo._________..
+_____________’$$P*_V$$$$$”"**$$$b.____.o$$P
+______________”_.oooZ$$$$b..o$$$$$$$$$$$$C
+______________.$$$$$$$$$$$$$$$$$$$$$$$$$$$b.
+______________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+________.o$$$o$$$$$$$$P”"*$$$$$$$$$P”"”*$$$P
+_______.$$$**$$$$P”q$C____”$$$b________.$$P
+_______$$P___”$$$b__”$_._.$$$$$b.______*”
+_______$$______$$$._____”***$$$$$$$b._A.
+_______V$b___._Z$$b.__._______”*$$$$$b$$:
+________V$$.__”*$$$b.__b._________”$$$$$
+_________”$$b_____”*$.__*b._________”$$$b
+___________”$$b._____”L__”$$o.________”*”_____.ooo..
+_____________”*$$o.________”*$$o.__________.o$$$$$
+_________________”*$$b._______”$$b._______.$$$$$*”
+____________________”*$$o.______”$$$o.____$$$$$’
+_______________________”$$o_______”$$$b.__”$$$$__
+_________________________”$b.______”$$$$b._”$$$$$
+________________________._”$$_______”$$$$b__”$$$$
+_________________________L.”$.______.$$$$$.__
+	""")
+	print (amarillo+"(solo para Android 7 o superior, teniendo en cuenta un espacion de 500mb minimo):")
+
+	ing = str(input(verde+"Empezar: y/n "+blanco))
+
+	if ing == "y" or ing == "Y":
+		os.system("clear")
+		print (rojo+"[!]Instalando unstable-repo"+verde)
+		time.sleep(0.3)
+		os.system("pkg install unstable-repo")
+		time.sleep(0.2)
+		os.system("clear")
+		print (rojo+"[!]Instalando METASPLOIT"+verde)
+		time.sleep(0.3)
+		os.system("pkg install metasploit")
+
+		time.sleep(0.2)
+		print("[!]Saliendo")
+		time.sleep(0.6)
+		exit()
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 time.sleep(1.2)
@@ -68,7 +130,9 @@ time.sleep(0.2)
 
 print ("[1]- Android")
 print ("[2]- Pc ")
-print ("[3]- Salir"+verde)
+print ("[3]- Instalar en termux")
+print ("[4]- Actualizar Metasploit (Solo Debian)")
+print ("[5]- Salir"+verde)
 
 
 inp = input("DarkGhost-$ "+blanco)
@@ -81,6 +145,11 @@ elif inp == "2":
 	entrada2()
 
 elif inp == "3":
+	entrada3()
+
+
+
+elif inp == "5":
 	print ("[!]Saliendo")
 	time.sleep(0.5)
 	exit()
